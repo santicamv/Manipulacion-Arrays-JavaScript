@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+        const products = [
+            { title: "Burger", price: 121 },
+            { title: "Pizza", price: 20 }
+        ];
+        let app = document.querySelector("#app");
+        products.forEach(product => {
+            app.innerHTML += `<li>${product.title} - ${product.price}</li>`;
+        })
+    </script>
+
+    <div id="tareas"></div>
+    <script>
+        let arrTareas = [
+            { nombre: "Lavar loza", estado: "Completada" },
+            { nombre: "Tender Cama", estado: "Completada" },
+            { nombre: "Lavar dientes", estado: "No completada" },
+            { nombre: "Desayunar", estado: "Completada" }
+        ];
+        let divTareas = document.querySelector("#tareas");
+
+        arrTareas.forEach(tarea => {
+            let mostrarTareas = `
+                <li> La tarea ${tarea.nombre} Se encuentra en estado ${tarea.estado} </li>
+            `
+            divTareas.innerHTML += mostrarTareas;
+        });
+    </script>
+</body>
+
+</html>
