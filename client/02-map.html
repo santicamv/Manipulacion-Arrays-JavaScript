@@ -21,6 +21,31 @@
         })
         app.innerHTML = list.join("")
     </script>
+
+
+    <script>
+        let arrayElements = [
+            {
+                name: "Product 1",
+                price: 1000,
+                stock: 10
+            },
+            {
+                name: "Product 2",
+                price: 2000,
+                stock: 20
+            }]
+        function solution(array) {
+            return array.map(item => {
+                return {
+                    ...item,
+                    taxes: Math.trunc(0.19 * (item.price))
+                };
+            });
+        };
+
+        console.log(solution(arrayElements));
+    </script>
 </body>
 
 </html>
