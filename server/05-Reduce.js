@@ -96,3 +96,4 @@ const temp4 = totals3.reduce((obj,item) => {
 },{});
 
 console.log(temp4);
+
